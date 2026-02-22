@@ -1,0 +1,13 @@
+# Sensitive files
+*.key
+*.pem
+*.cert
+*_history
+.ssh/id_*
+.ssh/known_hosts
+
+# Local machine-specific files
+.DS_Store
+*.swp
+*.swo
+*~
