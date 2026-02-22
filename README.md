@@ -18,13 +18,26 @@ To use these dotfiles on a new system:
    cd ~/dotfiles
    ```
 
-2. Create symlinks to your home directory:
+2. Set up secrets file:
+   ```bash
+   cp .secrets.zsh.template ~/.secrets.zsh
+   # Edit ~/.secrets.zsh with your actual secrets
+   ```
+
+3. Create symlinks to your home directory:
    ```bash
    ln -sf ~/dotfiles/.zshrc ~/.zshrc
    ln -sf ~/dotfiles/.bashrc ~/.bashrc
    ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
    # Add more symlinks as needed
    ```
+
+## Managing Secrets
+
+Secrets (API keys, passwords, tokens) are stored in `~/.secrets.zsh` which is NOT tracked by git.
+- Use `.secrets.zsh.template` as a reference for what secrets are needed
+- Never commit actual secrets to the repository
+- The `.zshrc` file sources `~/.secrets.zsh` automatically if it exists
 
 ## Adding New Config Files
 
